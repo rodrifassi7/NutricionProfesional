@@ -1,13 +1,14 @@
 ---
 import SvgNav from "./SvgNav.astro";
 
+import NavButton from "../components/NavButton.astro";
 ---
 
 <nav class="bg-naranja">
   <div
-    class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto h-20 overflow-visible"
+    class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto h-20 overflow-visible border-b-slate-900"
   >
-    <a href="#top" class="flex items-center space-x-3 rtl:space-x-reverse ">
+    <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
       <img
         class="h-16 w-16 rounded-full hover:scale-125 duration-200 cursor-pointer"
         src="/nutricion_logo.png"
@@ -29,33 +30,17 @@ import SvgNav from "./SvgNav.astro";
         class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-verde rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0"
       >
         <li>
-          <a
-            href="/about"
-            class="block py-2 px-3 text-gray-900 rounded hover:bg-verde md:hover:bg-verde md:border-0 md:hover:text-black md:p-3"
-            aria-current="page">Nosotros</a
-          >
+          <NavButton href="/nosotros" text="Nosotros" />
         </li>
         <li>
-          <a
-            href="/how-to-order"
-            class="block py-2 px-3 text-gray-900 rounded hover:bg-verde md:hover:bg-verde md:border-0 md:hover:text-black md:p-3"
-            >Cómo pedir</a
-          >
+          <NavButton href="/howTo" text="Como Comprar" />
         </li>
         <li>
-          <a
-            href="/products"
-            class="block py-2 px-3 text-gray-900 rounded hover:bg-verde md:hover:bg-verde md:border-0 md:hover:text-black md:p-3"
-            >Productos</a
-          >
+          <NavButton href="/productos" text="Productos" />
         </li>
 
         <li>
-          <a
-            href="/contact"
-            class="block py-2 px-3 text-gray-900 rounded hover:bg-verde md:hover:bg-verde md:border-0 md:hover:text-black md:p-3"
-            >Contacto</a
-          >
+          <NavButton href="/contact" text="Contacto" />
         </li>
       </ul>
     </div>
