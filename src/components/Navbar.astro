@@ -4,7 +4,7 @@ import SvgNav from "./SvgNav.astro";
 import NavButton from "../components/NavButton.astro";
 ---
 
-<nav class="bg-naranja">
+<nav class="bg-gray-100 px-7">
   <div
     class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto h-20 overflow-visible border-b-slate-900"
   >
@@ -23,20 +23,19 @@ import NavButton from "../components/NavButton.astro";
       aria-expanded="false"
     >
       <span class="sr-only">Open main menu</span>
-      <SvgNav />
+      <div class="border-2 border-blue-500">
+        <SvgNav />
+      </div>
     </button>
-    <div
-      class="hidden w-full md:block md:w-auto bg-naranja z-50"
-      id="navbar-default"
-    >
+    <div class="hidden w-full md:block md:w-auto z-50" id="navbar-default">
       <ul
-        class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-verde rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0"
+        class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-verde rounded-lg md:flex-row md:space-x-3 rtl:space-x-reverse md:mt-0 md:border-0"
       >
         <li>
           <NavButton href="/nosotros" text="Nosotros" />
         </li>
-        <li>
-          <NavButton href="/howTo" text="Como Comprar" />
+        <li class="bg-verde rounded text-white">
+          <NavButton href="/howTo" text="Hace tu pedido" />
         </li>
         <li>
           <NavButton href="/productos" text="Productos" />
